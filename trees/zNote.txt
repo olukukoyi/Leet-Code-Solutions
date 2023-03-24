@@ -1,0 +1,5 @@
+DFS is similar to a STACK DATA STRUCTURE
+    - white board a stack with the nodes for a visual representation
+
+
+MAKE SURE YOU DO PATH SUM
