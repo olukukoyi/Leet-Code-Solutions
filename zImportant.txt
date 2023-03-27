@@ -1,5 +1,6 @@
 read this when you have the chance
 
 14 patterns to ace any coding interview:
-
 https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed
+
+Redo favorite problems . 
