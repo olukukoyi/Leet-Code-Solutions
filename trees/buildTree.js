@@ -12,3 +12,5 @@ const buildTree = (preorder, inorder) => {
 };
 
 buildTree([3, 9, 20, 15, 7], [9, 3, 15, 20, 7]);
+
+/// Pattern: DFS Recursion, knowing how inorder and preorder traversals work. When slicing the arrays and passing it into the recursion the call, the sliced arrays must be the same. Keep that in mind when whiteboard. If theyre not the same, something is wrong in the logic/algorithm.
