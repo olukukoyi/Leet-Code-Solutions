@@ -23,7 +23,15 @@ class Trie {
     }
     curr.endOfWord = true;
   }
-
+  // regular search
+  search(word) {
+    let curr = root;
+    for (const char of word) {
+      if (!curr.children[char]) return false;
+      curr = curr.children[char];
+    }
+    return curr.endOfWord;
+  }
   // wildcardSeach where " . " can be any char
   searchVTwo(word) {
     const dfs = (j, root) => {
