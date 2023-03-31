@@ -12,6 +12,7 @@ var numIslands = function (grid) {
 
   // dfs logic
   const dfs = (r, c) => {
+    // break case
     if (
       r < 0 ||
       r >= rows ||
@@ -23,7 +24,8 @@ var numIslands = function (grid) {
       return;
     }
 
-    visit.add(`${r},${c}`);
+    visit.add(`${r},${c}`); // add to set
+    // recurisve call, keep expanding untill we're off the island
     dfs(r + 1, c);
     dfs(r - 1, c);
     dfs(r, c + 1);
