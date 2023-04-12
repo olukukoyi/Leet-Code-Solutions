@@ -7,12 +7,15 @@ var numIslands = function (grid) {
 
   let rows = grid.length;
   let cols = grid[0].length;
-  const visit = new Set();
+  const visit = new Set(); // stores the cells we already visited
   let islands = 0;
 
   // dfs logic
   const dfs = (r, c) => {
     // break case
+    // if we're out range,
+    // we expanded to water
+    // if the current cell is already visited, break out
     if (
       r < 0 ||
       r >= rows ||

@@ -12,8 +12,9 @@ const canFinish = (numCourse, prerequisites) => {
   for (const [course, prereq] of prerequisites) {
     preMap[course].push(prereq);
   }
+  // will look like this: { '0': [ 1 ], '1': [ 0 ] }      {"course": [prereq]}
 
-  const visitSet = new Set();
+  const visitSet = new Set(); // queue
   //dfs function, goal is to call dfs on all prereq
   const dfs = (course) => {
     if (visitSet.has(course)) return false; // if in set, return false
@@ -33,4 +34,9 @@ const canFinish = (numCourse, prerequisites) => {
     // calling dfs on every node b/c its NOT a connected graph
     if (!dfs(i)) return false;
   }
+  return true;
 };
+
+let res = canFinish(2, [[1, 0]]);
+
+console.log(res);
