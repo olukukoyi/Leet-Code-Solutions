@@ -18,12 +18,26 @@ class LRUCache {
     // l> <r pointing back at each other
     this.left.next = this.right;
     this.right.prev = this.left;
+    this.size = 0;
   }
   // helper functions for linked list :
   // remove from list
-  remove(node) {}
+  remove(node) {
+    let prev = node.prev;
+    let next = node.next;
+    prev.next = next;
+    next.prev = prev;
+    this.size--;
+  }
   // insert from right
-  insert() {}
+  insert(node) {
+    let prev = this.right.prev;
+    let next = this.right;
+    prev.next = next.prev = node;
+    node.next = next;
+    node.prev = prev;
+    this.size++;
+  }
 
   get(key) {
     if (this.cache[key]) {
@@ -41,9 +55,12 @@ class LRUCache {
     // if it does not exist, execute everything below
     this.cache[key] = new Node(key, value); // create new node and insert to hash
     this.insert(this.cache[key]); // insert to array
-    if (Object.keys(cache).length > this.capacity) {
+    // if surpassed capacity
+    if (this.size > this.capacity) {
       // remove from the linked list and delete the LRU from the hash map
-      // HERE 13:40
+      let lru = this.left.next;
+      delete this.cache[lru.key];
+      this.remove(lru); // remove from linked list
     }
   }
 }
