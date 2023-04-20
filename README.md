@@ -1,7 +1,7 @@
 # Leet-Code-Solutions
 The solutions to all the leet code problems I solved
 
-These are in depth solutions to leet code problems. I completed majority of the Linked List, Trees and Graphing probles for blind 75
+These are in depth solutions to leet code problems. I completed majority of the Linked List, Trees and Graphing problems for blind 75
 
 There are comments that break down the code and logic. I try to go into detail and break everything down so anyone can understand it.
 
