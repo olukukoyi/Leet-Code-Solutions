@@ -1,0 +1,14 @@
+DFS Template:
+
+Global Variables / Result
+
+DFS Function
+
+    - Break Cases
+    - Recursive Call
+        - sometimes You might have to implement some logic before calling DFS. Like adding the node to a hash or stack to handle backtracking or for something else. It really depends on the problem
+    - Logic when shooting back up tree / graph / callstack
+
+Return global Result
+
+------
