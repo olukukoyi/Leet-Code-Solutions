@@ -7,4 +7,4 @@ There are comments that break down the code and logic. I try to go into detail a
 
 I recently added a file called "templates.txt" This is where I will post most templates / patterns to problems. 
 
-I also have a more in depth break down of every problem I solved.
+I also have a more in depth break down of every problem I solved on a google doc.
