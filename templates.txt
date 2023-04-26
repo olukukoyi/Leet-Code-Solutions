@@ -12,3 +12,16 @@ DFS Function
 Return global Result
 
 ------
+
+
+BFS no queue or stack Template:
+
+Globabl Variables / Result
+    - make so to declare refrence to next level
+
+BFS loop (while loop)
+    -  BFS breakcase/logic
+        - condition of while loop is a break case
+        - instead having break cases that return true or false, we have break cases that handles some sort of logic
+
+Return global result
