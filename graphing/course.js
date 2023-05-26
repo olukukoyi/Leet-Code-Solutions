@@ -18,7 +18,7 @@ const canFinish = (numCourse, prerequisites) => {
   //dfs function, goal is to call dfs on all prereq
   const dfs = (course) => {
     if (visitSet.has(course)) return false; // if in set, return false
-    if (preMap[course] === []) return true; // no rereqs, so retur true
+    if (preMap[course] === []) return true; // no rereqs, so return true
 
     // dfs recursion call
     visitSet.add(course);
@@ -26,7 +26,7 @@ const canFinish = (numCourse, prerequisites) => {
       if (!dfs(prereq)) return false; // allows to call dfs, and handle if the return is false
     }
     visitSet.delete(course);
-    preMap[course] = [];
+    preMap[course] = []; // marker that tells us we can complete this class without worrying about prereqs
     return true;
   };
 
