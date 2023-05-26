@@ -25,3 +25,7 @@ const generateParenthesis = (n) => {
   backtrack(0, 0);
   return res;
 };
+
+// shoot down the tree and open, pop back up and close
+// add open if open < n
+//add close if close < open , make this happen after we shoot back up the tree and pop a open paraenthesis
