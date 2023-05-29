@@ -25,3 +25,14 @@ BFS loop (while loop)
         - instead having break cases that return true or false, we have break cases that handles some sort of logic
 
 Return global result
+
+
+
+--------
+
+
+
+When traversing graphs that may have multiple edges,
+Create an adj list
+Temporarily store to array of neighboring nodes in a temp array
+As you visit the neighboring nodes, remove the nodes from adj array
