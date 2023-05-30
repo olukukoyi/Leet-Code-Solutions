@@ -1,10 +1,7 @@
 const longestIncPath = (matrix) => {
   const rows = matrix.length;
   const cols = matrix[0].length;
-  const map = {};
-  let result = 0;
-
-  // dictionary for expansion
+  const map = {}; // caching vals
 
   const directions = [
     [0, 1],
@@ -13,18 +10,17 @@ const longestIncPath = (matrix) => {
     [-1, 0],
   ];
 
-  // bfs
   const bfs = (r, c) => {
-    let runningLongestPath = 1;
     const key = `${r},${c}`;
 
-    // break case
-    if (map[key]) return map[key]; // if cached, return val
-    // expansion
+    if (map[key]) return map[key];
+
+    // execute bfs
+    let longestPath = 1;
     for (const [dr, dc] of directions) {
-      let newRow = r + dr;
-      let newCol = c + dc;
-      // recusive call
+      const newRow = dr + r;
+      const newCol = dc + c;
+
       if (
         newRow >= 0 &&
         newRow < rows &&
@@ -32,23 +28,20 @@ const longestIncPath = (matrix) => {
         newCol < cols &&
         matrix[newRow][newCol] > matrix[r][c]
       ) {
-        runningLongestPath = Math.max(
-          runningLongestPath,
-          1 + bfs(newRow, newCol)
-        );
+        longestPath = Math.max(longestPath, 1 + bfs(newRow, newCol));
       }
     }
-    map[key] = runningLongestPath;
-    return runningLongestPath;
+    // logic when we come back up
+    map[key] = longestPath; // maps to key
+    return longestPath; // returns path to neighboring nodes then to result
   };
 
-  // initialoiz bfs call
+  let result = 0;
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
-      result = Math.max(res, bfs(r, c));
+      result = Math.max(result, bfs(r, c));
     }
   }
-  // global return result
   return result;
 };
 
