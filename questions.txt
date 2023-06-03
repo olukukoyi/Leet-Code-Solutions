@@ -3,9 +3,12 @@ Questions to do:
 
 
 Follow graph playlist
+
+Word Search
+Longest increasing path in a matrix
 Redo course schedules (1 ,2 ,4)
-Network Delay time
-Max Area of island
+Then proceed with the playlist
+
 
 
 Alogirthims :
