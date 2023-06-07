@@ -1,15 +1,12 @@
 Questions to do:
 
 
-
 Follow graph playlist
 
-Word Search
-Longest increasing path in a matrix
-Redo course schedules (1 ,2 ,4)
+
+Reconstruct Itenerary
+Eventual Safes 
 Then proceed with the playlist
-
-
 
 Alogirthims :
 
