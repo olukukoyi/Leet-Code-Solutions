@@ -4,8 +4,8 @@ Questions to do:
 Follow graph playlist
 
 
-Reconstruct Itenerary
 Eventual Safes 
+Redundant Connection
 Then proceed with the playlist
 
 Alogirthims :
