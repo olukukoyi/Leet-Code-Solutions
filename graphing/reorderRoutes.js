@@ -7,7 +7,7 @@ const reorder = (n, connections) => {
   for (let i = 0; i < n; i++) {
     adj[i] = [];
   }
-  // adj of what we want
+  // adj of what we want (bidirectional edge relationship)
   for (const [a, b] of connections) {
     adj[a].push(b);
     adj[b].push(a);
