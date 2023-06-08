@@ -1,35 +1,36 @@
 const reorder = (n, connections) => {
-  // store edges in set
+  // hash connections to set
+  const edges = new Set(connections.map(([a, b]) => `${a},${b}`));
 
-  const edges = new Set(connections.map(([a, b]) => [a, b]));
-
-  // create adj
-  const adj = {};
+  // adj list
+  const adj = {}; // what we want , we will make it bi-directional based off of what we have
   for (let i = 0; i < n; i++) {
     adj[i] = [];
   }
+  // adj of what we want
   for (const [a, b] of connections) {
     adj[a].push(b);
+    adj[b].push(a);
   }
-  // dfs
+
   const visit = new Set();
   let changes = 0;
 
   const dfs = (city) => {
-    // iterate over neighbors
     for (const nei of adj[city]) {
-      if (visit.has(nei)) return false;
+      if (visit.has(nei)) continue;
 
       visit.add(nei);
 
-      if (!visit.has(`${nei},${city}`)) {
+      // chck if we have the bidirectional relationship
+      if (!edges.has(`${nei},${city}`)) {
         changes += 1;
       }
-
       dfs(nei);
     }
-    return changes;
   };
+
+  visit.add(0);
   dfs(0);
   return changes;
 };
