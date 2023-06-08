@@ -4,10 +4,14 @@ Questions to do:
 Follow graph playlist
 
 
-Eventual Safes 
-Redundant Connection
+reorder routers so all paths lead to zero
 Then proceed with the playlist
 
 Alogirthims :
 
-Shortes path
+Shortest path 
+Euler path
+Topological Sort 
+DFS
+BFS
+Union FInd
