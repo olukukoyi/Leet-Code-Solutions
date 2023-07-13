@@ -36,3 +36,15 @@ When traversing graphs that may have multiple edges,
 Create an adj list
 Temporarily store to array of neighboring nodes in a temp array
 As you visit the neighboring nodes, remove the nodes from adj array
+
+
+
+--------
+
+
+Dynamic Programming: 
+
+Identify main problem
+Break the main problem into sub problems
+Choose how to contructn table (based off of sub problems)
+
