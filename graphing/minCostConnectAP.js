@@ -159,11 +159,17 @@ const minCostConnectPoints = (points) => {
 };
 
 console.log(
-  minCostConnectPoints([
+  minCostConnectPoints(
     [0, 0],
     [2, 2],
     [3, 10],
     [5, 2],
     [7, 0],
-  ])
+    [5, 0],
+    [2, 3],
+    [1, 6],
+    [4, 1],
+    [10, 10],
+    [3, 8]
+  )
 );
