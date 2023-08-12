@@ -4,13 +4,8 @@ Questions to do:
 Follow graph playlist
 
 
-word search2
-
-
 warmups for tomorrow: 
-reorder routers so all paths lead to zero
-reorder routes
-Union Find Problem
+
 
 Alogirthims :
 
