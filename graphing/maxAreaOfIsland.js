@@ -24,13 +24,16 @@ const maxAreaOfIsland = (grid) => {
     }
 
     visit.add(`${r},${c}`);
-    area = 1;
+
+    area = 1; // initialize area to 1
 
     for (const [dr, dc] of directions) {
       const newRow = dr + r;
       const newCol = dc + c;
 
-      area += dfs(newRow, newCol);
+      // iterate over neis and add the returned area to current area
+      area += dfs(newRow, newCol); // 1 += neighbors , then return this area
+      // samthing as writing return 1 + dfs(on all other directions)
     }
 
     return area;
@@ -50,13 +53,10 @@ const maxAreaOfIsland = (grid) => {
 
 console.log(
   maxAreaOfIsland([
-    [0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-    [0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0],
-    [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+    [0, 0, 1, 1],
+    [0, 0, 0, 0],
+    [0, 1, 1, 0],
+    [0, 1, 0, 0],
+    [0, 1, 0, 0],
   ])
 );

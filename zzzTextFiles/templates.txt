@@ -21,7 +21,7 @@ Globabl Variables / Result
 
 BFS loop (while loop)
     -  BFS breakcase/logic
-        - condition of while loop is a break case
+        - condition of while loop is ALSO a break case 
         - instead having break cases that return true or false, we have break cases that handles some sort of logic
 
 Return global result

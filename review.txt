@@ -1,0 +1,22 @@
+review:
+count sub islands
+balanced binary tree
+goodNodes
+mergeTrees
+
+
+
+
+
+graphing:
+nework delay time (dijk)
+swim in rising water (dijk)
+cheapest flights within K stops (fords)
+
+
+trees:
+
+
+then do dp after trees
+
+
