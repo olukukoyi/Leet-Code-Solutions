@@ -1,14 +1,21 @@
 review:
-count sub islands
+
+then... 
+
 balanced binary tree
 goodNodes
 mergeTrees
 
+then... proceed with trees while doing algo expert stuff
+bv 
 
 
 
 
-graphing:
+
+
+
+graphing algos (maybe):
 nework delay time (dijk)
 swim in rising water (dijk)
 cheapest flights within K stops (fords)
@@ -18,5 +25,7 @@ trees:
 
 
 then do dp after trees
+
+try to do trees than dp
 
 

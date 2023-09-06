@@ -2,7 +2,7 @@ const isBalanced = (root) => {
   const dfs = (root) => {
     // breakcases
     if (!root) {
-      return [T, 0]; // [balanced, height]
+      return [true, 0]; // [balanced, height]
     }
 
     // recusrive call
